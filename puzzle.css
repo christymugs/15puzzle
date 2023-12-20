@@ -1,0 +1,214 @@
+html,body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+
+h1 {
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: blue;
+    overflow: hidden; 
+}
+
+
+@keyframes bounceIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-100%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.h1 span {
+    display: inline-block;
+    opacity: 0;
+    animation: bounceIn 0.5s forwards;
+}
+
+.h1 span:nth-child(1) {
+    animation-delay: 0.2s;
+}
+
+.h1 span:nth-child(2) {
+    animation-delay: 0.3s;
+}
+
+.h1 span:nth-child(3) {
+    animation-delay: 0.4s;
+}
+
+.h1 span:nth-child(4) {
+    animation-delay: 0.5s;
+}
+.h1 span:nth-child(5) {
+    animation-delay: 0.6s;
+}
+.h1 span:nth-child(6) {
+    animation-delay: 0.7s;
+}
+.h1 span:nth-child(7) {
+    animation-delay: 0.8s;
+}
+.h1 span:nth-child(8) {
+    animation-delay: 0.9s;
+}
+.h1 span:nth-child(9) { 
+    animation-delay: 1.0s;
+}
+
+.h1 span:nth-child(10) {
+    animation-delay: 1.2s;
+}
+.h1 span:nth-child(11) {
+    animation-delay: 1.3s;
+}
+
+.h1 span:nth-child(12) {
+    animation-delay: 1.4s;
+}
+
+.h1 span:nth-child(13) {
+    animation-delay: 1.5s;
+}
+
+.h1 span:nth-child(14) {
+    animation-delay: 1.6s;
+}
+.h1 span:nth-child(15) {
+    animation-delay: 1.7s;
+}
+.h1 span:nth-child(16) {
+    animation-delay: 1.8s;
+}
+.h1 span:nth-child(17) {
+    animation-delay: 1.9s;
+}
+.h1 span:nth-child(18) {
+    animation-delay: 2.0s;
+}
+.h1 span:nth-child(19) {
+    animation-delay: 0.20s;
+}
+.h1 span:nth-child(20) {
+    animation-delay: 2.1s;
+}
+.h1 span:nth-child(21) {
+    animation-delay: 2.2s;
+}
+.h1 span:nth-child(22) {
+    animation-delay: 2.3s;
+}
+.h1 span:nth-child(23) {
+    animation-delay: 2.4s;
+}
+.h1 span:nth-child(24) {
+    animation-delay: 2.5s;
+}
+#button-container {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+#play-game-btn,
+#puzzle-size {
+    padding: 10px 20px;
+    font-size: 18px;
+    background-color: blue;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-bottom: 10px;
+}
+
+#play-game-btn:hover,
+#puzzle-size:hover {
+    background-color: darkblue;
+}
+
+#puzzle-container {
+    width: 400px;
+    height: 400px;
+    margin: 20px auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 5px;
+    transition: transform 1s ease-in-out;
+}
+
+#shuffle-btn,
+#give-up-btn{
+    padding: 10px 20px;
+    font-size: 18px;
+    background-color: blue;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-bottom: 10px;
+    text-align: center;
+}
+#moves-container {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.tile {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: darkblue;
+    color: whitesmoke;
+    font-size: 32px;
+    font-weight: bold;
+    cursor: grab;
+    border-radius: 10px;
+}
+
+.tile.empty {
+    background-color: #1e1e8a;
+    border-radius: 10px;
+}
+
+.moveCount {
+    text-align: center;
+    color:blue;
+    font-size: 2em;
+    margin-top: 10px;
+    font-weight: bolder;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.tile.initial-animation {
+    animation: initialBounce 0.5s ease-in-out;
+}
+
+@keyframes initialBounce {
+    0% {
+        transform: scale(0.5);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+.game-started .tile {
+    background-color: rgba(58, 58, 217, 0.7); 
+}
+.tile-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    border-radius: 10px;
+}

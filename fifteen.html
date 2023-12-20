@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Puzzle Game</title>
+        <link rel="stylesheet" href="puzzle.css">
+    </head>
+    <body>
+        <h1 class="h1">
+            <span>W</span>
+            <span>e</span>
+            <span>l</span>
+            <span>c</span>
+            <span>o</span>
+            <span>m</span>
+            <span>e</span>
+            <span> </span>
+            <span>t</span>
+            <span>o</span>
+            <span> </span>
+            <span> </span>
+            <span>P</span>
+            <span>u</span>
+            <span>z</span>
+            <span>z</span>
+            <span>l</span>
+            <span>e</span>
+            <span> </span>
+            <span>M</span>
+            <span>a</span>
+            <span>n</span>
+            <span>i</span>
+            <span>a</span>
+        </h1>
+        <audio id="bgMusic" loop>
+            <source src = "gamemusic.mp3" type = "audio/mpeg">
+        </audio>      
+        <div id="button-container">
+            <select id="puzzle-size">
+                <option value="3">3x3</option>
+                <option value="4" selected>4x4</option>
+                <option value="6">6x6</option>
+                <option value="8">8x8</option>
+            </select>
+            <button id="play-game-btn">Play Game</button>
+        </div>
+        <div id="moves-container">
+            <div id="timer" class="moveCount">Time: 0 seconds</div>
+            <div id="moveCount" class="moveCount">Moves: 0</div>
+            <button id="shuffle-btn" style="display: none;">Shuffle</button>
+            <button id="give-up-btn" style="display: none;">Give Up</button>
+        </div>        
+        <div id="puzzle-container"></div>
+        <script src="puzzle.js"></script>
+    </body>
+</html>
